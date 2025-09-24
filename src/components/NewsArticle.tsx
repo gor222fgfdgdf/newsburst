@@ -17,28 +17,27 @@ const NewsArticle = ({
   fullText 
 }: NewsArticleProps) => {
   return (
-    <article className="max-w-4xl mx-auto mb-[150px]">
+    <article className="max-w-4xl mx-auto mb-24">
       {/* Main image */}
       <div className="relative">
         <img 
           src={imageUrl} 
           alt={imageAlt} 
-          className="w-full h-48 md:h-64 object-cover"
+          className="w-full h-48 sm:h-56 md:h-64 object-cover"
           loading="eager"
         />
       </div>
 
       {/* Article content */}
-      <div className="bg-white p-6">
+      <div className="bg-card p-4 sm:p-6 shadow-sm">
         {/* Article title */}
-        <h2 className="text-2xl md:text-3xl font-black text-foreground mb-4 leading-tight">
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-black text-foreground mb-4 leading-tight">
           {newsItem.title}
-        </h2>
-
+        </h1>
 
         {/* Article text */}
-        <div className="prose prose-lg max-w-none mb-8">
-          <p className="text-foreground leading-relaxed text-base">
+        <div className="prose prose-lg max-w-none mb-6 sm:mb-8">
+          <p className="text-foreground leading-relaxed text-sm sm:text-base">
             {fullText}
           </p>
         </div>
@@ -48,7 +47,7 @@ const NewsArticle = ({
           href={newsItem.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="block bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-lg text-center no-underline transition-colors duration-200"
+          className="block bg-accent hover:bg-accent-hover text-white font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-center no-underline transition-colors duration-200 touch-manipulation"
         >
           Czytaj dalej
         </a>
