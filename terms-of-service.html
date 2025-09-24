@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regulamin serwisu - ZUS Informacje</title>
+    <meta name="description" content="Regulamin serwisu ZUS Informacje" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: 'hsl(0 0% 98%)',
+              foreground: 'hsl(222.2 84% 4.9%)',
+            },
+            fontFamily: {
+              sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+
+  <body class="min-h-screen bg-gray-50 py-8 font-sans">
+    <div class="max-w-4xl mx-auto px-6">
+      <!-- Кнопка возврата -->
+      <div class="mb-8">
+        <a 
+          href="./index.html" 
+          class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-colors duration-200"
+        >
+          ← Powrót do strony głównej
+        </a>
+      </div>
+      
+      <article class="bg-white p-8 shadow-sm">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">
+          Regulamin serwisu
+        </h1>
+        
+        <div class="prose prose-lg max-w-none text-gray-900 space-y-6">
+          <section>
+            <h2 class="text-xl font-semibold mb-3">1. Postanowienia ogólne</h2>
+            <p>
+              Niniejszy regulamin określa zasady korzystania z serwisu ZUS Informacje.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-semibold mb-3">2. Definicje</h2>
+            <p>
+              Serwis - portal internetowy dostępny pod adresem ZUS Informacje, 
+              udostępniający informacje o emeryturach i świadczeniach ZUS.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-semibold mb-3">3. Zasady korzystania</h2>
+            <p>
+              Korzystanie z serwisu jest bezpłatne i dostępne dla wszystkich użytkowników 
+              bez konieczności rejestracji.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-semibold mb-3">4. Odpowiedzialność</h2>
+            <p>
+              Informacje publikowane w serwisie mają charakter informacyjny. 
+              Administrator nie ponosi odpowiedzialności za decyzje podjęte na ich podstawie.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-semibold mb-3">5. Zmiany regulaminu</h2>
+            <p>
+              Administrator zastrzega sobie prawo do wprowadzania zmian w regulaminie. 
+              Zmiany wchodzą w życie z dniem publikacji.
+            </p>
+          </section>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>

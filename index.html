@@ -18,11 +18,85 @@
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
     
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: 'hsl(0 0% 98%)',
+              foreground: 'hsl(222.2 84% 4.9%)',
+              card: 'hsl(0 0% 100%)',
+              border: 'hsl(214.3 31.8% 91.4%)',
+              accent: {
+                DEFAULT: 'hsl(359 100% 60%)',
+                hover: 'hsl(359 100% 55%)'
+              },
+              muted: {
+                foreground: 'hsl(0 0% 45%)'
+              },
+            },
+            fontFamily: {
+              sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
   </head>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body class="bg-white font-sans">
+    <div class="min-h-screen bg-white">
+      <main>
+        <article class="max-w-4xl mx-auto mb-24">
+          <!-- Main image -->
+          <div class="relative">
+            <img 
+              src="./src/assets/polish-pensioners-new.jpg" 
+              alt="Grupa polskich seniorów zaniepokojonych zmianami w systemie emerytalnym" 
+              class="w-full h-48 sm:h-56 md:h-64 object-cover"
+            />
+          </div>
+
+          <!-- Article content -->
+          <div class="bg-white p-4 sm:p-6 shadow-sm">
+            <!-- Article title -->
+            <h1 class="text-xl sm:text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight">
+              ZUS zawiesił wypłaty emerytur seniorów
+            </h1>
+
+            <!-- Article text -->
+            <div class="prose prose-lg max-w-none mb-6 sm:mb-8">
+              <p class="text-gray-800 leading-relaxed text-sm sm:text-base">
+                To już nastąpiło! Trybunał Konstytucyjny wydał orzeczenie w tzw. sprawie emery..
+              </p>
+            </div>
+
+            <!-- Read more button -->
+            <a
+              href="https://ibr2025.sa.com/Gbq2H7f7"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block bg-blue-600 hover:bg-blue-700 text-white font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-center no-underline transition-colors duration-200"
+              style="touch-action: manipulation;"
+            >
+              Czytaj dalej
+            </a>
+          </div>
+        </article>
+      </main>
+      
+      <footer class="bg-gray-100 py-8 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="flex flex-wrap justify-center gap-4 mb-4">
+            <a href="./privacy-policy.html" class="text-gray-600 hover:text-gray-800 text-sm">Polityka prywatności</a>
+            <a href="./terms-of-service.html" class="text-gray-600 hover:text-gray-800 text-sm">Regulamin</a>
+            <a href="./contact.html" class="text-gray-600 hover:text-gray-800 text-sm">Kontakt</a>
+            <a href="./about.html" class="text-gray-600 hover:text-gray-800 text-sm">O nas</a>
+          </div>
+          <p class="text-gray-500 text-xs">&copy; 2024 ZUS News. Wszystkie prawa zastrzeżone.</p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
